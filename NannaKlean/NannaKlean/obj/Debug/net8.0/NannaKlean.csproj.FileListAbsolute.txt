@@ -144,3 +144,8 @@ C:\Users\nmuri\Documents\Repositories\NannaKlean\NannaKlean\NannaKlean\obj\Debug
 C:\Users\nmuri\Documents\Repositories\NannaKlean\NannaKlean\NannaKlean\obj\Debug\net8.0\NannaKlean.pdb
 C:\Users\nmuri\Documents\Repositories\NannaKlean\NannaKlean\NannaKlean\obj\Debug\net8.0\NannaKlean.genruntimeconfig.cache
 C:\Users\nmuri\Documents\Repositories\NannaKlean\NannaKlean\NannaKlean\obj\Debug\net8.0\ref\NannaKlean.dll
+C:\Users\nmuri\Documents\Repositories\NannaKlean\NannaKlean\NannaKlean\obj\Debug\net8.0\NannaKlean.sourcelink.json
+C:\Users\nmuri\Documents\Repositories\NannaKlean\NannaKlean\NannaKlean\bin\Debug\net8.0\NannaKlean.staticwebassets.endpoints.json
+C:\Users\nmuri\Documents\Repositories\NannaKlean\NannaKlean\NannaKlean\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\nmuri\Documents\Repositories\NannaKlean\NannaKlean\NannaKlean\obj\Debug\net8.0\staticwebassets\msbuild.NannaKlean.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\nmuri\Documents\Repositories\NannaKlean\NannaKlean\NannaKlean\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
