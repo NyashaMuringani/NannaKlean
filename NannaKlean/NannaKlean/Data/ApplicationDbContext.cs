@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using NannaKlean.Models;
 
 namespace NannaKlean.Data
 {
@@ -9,5 +10,6 @@ namespace NannaKlean.Data
             : base(options)
         {
         }
+        public DbSet<NannaKlean.Models.Contact> ContactModel { get; set; } = default!;
     }
 }
