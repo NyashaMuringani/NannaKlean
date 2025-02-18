@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\nmuri\\Documents\\Repositories\\NannaKlean\\NannaKlean\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nmuri\\Documents\\Repositories\\NannaKlean\\NannaKlean\\NannaKlean\\Data\\Migrations\\20250218003653_addingContacts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:NannaKlean\\Data\\Migrations\\20250218003653_addingContacts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3B03754E-5940-48D1-982A-B1AA96CE4456}|NannaKlean\\NannaKlean.csproj|c:\\users\\nmuri\\documents\\repositories\\nannaklean\\nannaklean\\nannaklean\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3B03754E-5940-48D1-982A-B1AA96CE4456}|NannaKlean\\NannaKlean.csproj|solutionrelative:nannaklean\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B03754E-5940-48D1-982A-B1AA96CE4456}|NannaKlean\\NannaKlean.csproj|c:\\users\\nmuri\\documents\\repositories\\nannaklean\\nannaklean\\nannaklean\\views\\contacts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3B03754E-5940-48D1-982A-B1AA96CE4456}|NannaKlean\\NannaKlean.csproj|solutionrelative:nannaklean\\views\\contacts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B03754E-5940-48D1-982A-B1AA96CE4456}|NannaKlean\\NannaKlean.csproj|c:\\users\\nmuri\\documents\\repositories\\nannaklean\\nannaklean\\nannaklean\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B03754E-5940-48D1-982A-B1AA96CE4456}|NannaKlean\\NannaKlean.csproj|solutionrelative:nannaklean\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B03754E-5940-48D1-982A-B1AA96CE4456}|NannaKlean\\NannaKlean.csproj|c:\\users\\nmuri\\documents\\repositories\\nannaklean\\nannaklean\\nannaklean\\views\\contacts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3B03754E-5940-48D1-982A-B1AA96CE4456}|NannaKlean\\NannaKlean.csproj|solutionrelative:nannaklean\\views\\contacts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3B03754E-5940-48D1-982A-B1AA96CE4456}|NannaKlean\\NannaKlean.csproj|c:\\users\\nmuri\\documents\\repositories\\nannaklean\\nannaklean\\nannaklean\\controllers\\contactscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,20 +27,12 @@
       "RelativeMoniker": "D:0:0:{3B03754E-5940-48D1-982A-B1AA96CE4456}|NannaKlean\\NannaKlean.csproj|solutionrelative:nannaklean\\models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3B03754E-5940-48D1-982A-B1AA96CE4456}|NannaKlean\\NannaKlean.csproj|c:\\users\\nmuri\\documents\\repositories\\nannaklean\\nannaklean\\nannaklean\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3B03754E-5940-48D1-982A-B1AA96CE4456}|NannaKlean\\NannaKlean.csproj|solutionrelative:nannaklean\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3B03754E-5940-48D1-982A-B1AA96CE4456}|NannaKlean\\NannaKlean.csproj|c:\\users\\nmuri\\documents\\repositories\\nannaklean\\nannaklean\\nannaklean\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3B03754E-5940-48D1-982A-B1AA96CE4456}|NannaKlean\\NannaKlean.csproj|solutionrelative:nannaklean\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3B03754E-5940-48D1-982A-B1AA96CE4456}|NannaKlean\\NannaKlean.csproj|c:\\users\\nmuri\\documents\\repositories\\nannaklean\\nannaklean\\nannaklean\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3B03754E-5940-48D1-982A-B1AA96CE4456}|NannaKlean\\NannaKlean.csproj|solutionrelative:nannaklean\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3B03754E-5940-48D1-982A-B1AA96CE4456}|NannaKlean\\NannaKlean.csproj|c:\\users\\nmuri\\documents\\repositories\\nannaklean\\nannaklean\\nannaklean\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3B03754E-5940-48D1-982A-B1AA96CE4456}|NannaKlean\\NannaKlean.csproj|solutionrelative:nannaklean\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nmuri\\AppData\\Local\\Temp\\1sjlkbtx..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
@@ -48,37 +52,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20250218003653_addingContacts.cs",
-              "DocumentMoniker": "C:\\Users\\nmuri\\Documents\\Repositories\\NannaKlean\\NannaKlean\\NannaKlean\\Data\\Migrations\\20250218003653_addingContacts.cs",
-              "RelativeDocumentMoniker": "NannaKlean\\Data\\Migrations\\20250218003653_addingContacts.cs",
-              "ToolTip": "C:\\Users\\nmuri\\Documents\\Repositories\\NannaKlean\\NannaKlean\\NannaKlean\\Data\\Migrations\\20250218003653_addingContacts.cs",
-              "RelativeToolTip": "NannaKlean\\Data\\Migrations\\20250218003653_addingContacts.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T00:36:54.182Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ContactsController.cs",
-              "DocumentMoniker": "C:\\Users\\nmuri\\Documents\\Repositories\\NannaKlean\\NannaKlean\\NannaKlean\\Controllers\\ContactsController.cs",
-              "RelativeDocumentMoniker": "NannaKlean\\Controllers\\ContactsController.cs",
-              "ToolTip": "C:\\Users\\nmuri\\Documents\\Repositories\\NannaKlean\\NannaKlean\\NannaKlean\\Controllers\\ContactsController.cs",
-              "RelativeToolTip": "NannaKlean\\Controllers\\ContactsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T00:29:08.747Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\nmuri\\Documents\\Repositories\\NannaKlean\\NannaKlean\\NannaKlean\\Views\\Contacts\\Index.cshtml",
+              "RelativeDocumentMoniker": "NannaKlean\\Views\\Contacts\\Index.cshtml",
+              "ToolTip": "C:\\Users\\nmuri\\Documents\\Repositories\\NannaKlean\\NannaKlean\\NannaKlean\\Views\\Contacts\\Index.cshtml",
+              "RelativeToolTip": "NannaKlean\\Views\\Contacts\\Index.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-18T00:46:39.657Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\nmuri\\Documents\\Repositories\\NannaKlean\\NannaKlean\\NannaKlean\\Views\\Contacts\\Create.cshtml",
+              "RelativeDocumentMoniker": "NannaKlean\\Views\\Contacts\\Create.cshtml",
+              "ToolTip": "C:\\Users\\nmuri\\Documents\\Repositories\\NannaKlean\\NannaKlean\\NannaKlean\\Views\\Contacts\\Create.cshtml",
+              "RelativeToolTip": "NannaKlean\\Views\\Contacts\\Create.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-18T00:40:40.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Contact.cs",
               "DocumentMoniker": "C:\\Users\\nmuri\\Documents\\Repositories\\NannaKlean\\NannaKlean\\NannaKlean\\Models\\Contact.cs",
               "RelativeDocumentMoniker": "NannaKlean\\Models\\Contact.cs",
@@ -86,12 +90,11 @@
               "RelativeToolTip": "NannaKlean\\Models\\Contact.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T00:22:27.327Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T00:22:27.327Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\nmuri\\Documents\\Repositories\\NannaKlean\\NannaKlean\\NannaKlean\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "NannaKlean\\Controllers\\HomeController.cs",
@@ -104,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\nmuri\\Documents\\Repositories\\NannaKlean\\NannaKlean\\NannaKlean\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "NannaKlean\\Data\\ApplicationDbContext.cs",
@@ -112,12 +115,37 @@
               "RelativeToolTip": "NannaKlean\\Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T23:54:01.554Z",
+              "WhenOpened": "2025-02-17T23:54:01.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\nmuri\\Documents\\Repositories\\NannaKlean\\NannaKlean\\NannaKlean\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "NannaKlean\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\nmuri\\Documents\\Repositories\\NannaKlean\\NannaKlean\\NannaKlean\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "NannaKlean\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T00:50:58.77Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
+              "Title": "ContactsController.cs",
+              "DocumentMoniker": "C:\\Users\\nmuri\\Documents\\Repositories\\NannaKlean\\NannaKlean\\NannaKlean\\Controllers\\ContactsController.cs",
+              "RelativeDocumentMoniker": "NannaKlean\\Controllers\\ContactsController.cs",
+              "ToolTip": "C:\\Users\\nmuri\\Documents\\Repositories\\NannaKlean\\NannaKlean\\NannaKlean\\Controllers\\ContactsController.cs",
+              "RelativeToolTip": "NannaKlean\\Controllers\\ContactsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T00:29:08.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "1sjlkbtx..sql",
               "DocumentMoniker": "C:\\Users\\nmuri\\AppData\\Local\\Temp\\1sjlkbtx..sql",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\1sjlkbtx..sql",
@@ -128,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\nmuri\\Documents\\Repositories\\NannaKlean\\NannaKlean\\NannaKlean\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "NannaKlean\\Views\\Shared\\_Layout.cshtml",
@@ -136,25 +164,11 @@
               "RelativeToolTip": "NannaKlean\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAABkAAAAAAAAAAAAEwCwAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-12T00:58:30.984Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T00:58:30.984Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\nmuri\\Documents\\Repositories\\NannaKlean\\NannaKlean\\NannaKlean\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "NannaKlean\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\nmuri\\Documents\\Repositories\\NannaKlean\\NannaKlean\\NannaKlean\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "NannaKlean\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-12T00:50:58.77Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "wzgpf3gw..sql",
               "DocumentMoniker": "C:\\Users\\nmuri\\AppData\\Local\\Temp\\wzgpf3gw..sql",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\wzgpf3gw..sql",
@@ -165,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\nmuri\\Documents\\Repositories\\NannaKlean\\NannaKlean\\NannaKlean\\appsettings.json",
               "RelativeDocumentMoniker": "NannaKlean\\appsettings.json",

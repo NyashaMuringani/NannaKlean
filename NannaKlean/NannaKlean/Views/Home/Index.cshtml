@@ -9,7 +9,12 @@
     <h5>We offer some of the best professional cleaning services in Winnipeg! Click the button below to get a quote:</h5>
     <br />
 
-    <button type="button" class="btn btn-primary btn-lg btn-block" style="margin: 6px">Get a residential cleaning quote</button>
+    @* <button type="button" class="btn btn-primary btn-lg btn-block" style="margin: 6px" asp-controller="ContactsController" asp-action="Create">Get a residential cleaning quote</button> *@
+
+    <a class="btn btn-primary  btn-lg  btn-block" role="button" style="margin: 6px" asp-controller="Contacts" asp-action="Create">
+        Get a residential cleaning quote
+    </a>
+
     @* <button type="button" class="btn btn-primary btn-lg btn-block" style="margin: 6px">Get a business cleaning quote</button> *@
     <br />
     <br />
