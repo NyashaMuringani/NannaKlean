@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using NannaKlean.Data;
 using NannaKlean.Models;
 
-namespace NannaKlean.Controllers
+namespace NannaKlean.Views
 {
     public class ContactsController : Controller
     {
@@ -54,7 +54,7 @@ namespace NannaKlean.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Email,PhoneNumber")] Contact contact)
+        public async Task<IActionResult> Create([Bind("Id,Name,Email,PhoneNumber,createTime")] Contact contact)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace NannaKlean.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Email,PhoneNumber")] Contact contact)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Email,PhoneNumber,createTime")] Contact contact)
         {
             if (id != contact.Id)
             {

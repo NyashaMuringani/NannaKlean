@@ -1,4 +1,4 @@
-﻿@model IEnumerable<NannaKlean.Models.Contact>
+﻿@model IEnumerable<NannaKlean.Models.ResCleanDetail>
 
 @{
     ViewData["Title"] = "Index";
@@ -13,13 +13,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                @Html.DisplayNameFor(model => model.squareFeet)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Email)
+                @Html.DisplayNameFor(model => model.numLivingRooms)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.PhoneNumber)
+                @Html.DisplayNameFor(model => model.numBedrooms)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.numBathRooms)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.createTime)
@@ -31,13 +34,16 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Name)
+                @Html.DisplayFor(modelItem => item.squareFeet)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Email)
+                @Html.DisplayFor(modelItem => item.numLivingRooms)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PhoneNumber)
+                @Html.DisplayFor(modelItem => item.numBedrooms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.numBathRooms)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.createTime)

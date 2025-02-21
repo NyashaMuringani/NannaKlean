@@ -11,5 +11,6 @@ namespace NannaKlean.Data
         {
         }
         public DbSet<NannaKlean.Models.Contact> ContactModel { get; set; } = default!;
+        public DbSet<NannaKlean.Models.ResCleanDetail> ResCleanDetail { get; set; } = default!;
     }
 }

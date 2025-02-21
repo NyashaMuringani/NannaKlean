@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NannaKlean.Data;
 
@@ -11,9 +12,11 @@ using NannaKlean.Data;
 namespace NannaKlean.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250221021001_timeStamp")]
+    partial class timeStamp
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -247,34 +250,6 @@ namespace NannaKlean.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ContactModel");
-                });
-
-            modelBuilder.Entity("NannaKlean.Models.ResCleanDetail", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("createTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("numBathRooms")
-                        .HasColumnType("int");
-
-                    b.Property<int>("numBedrooms")
-                        .HasColumnType("int");
-
-                    b.Property<int>("numLivingRooms")
-                        .HasColumnType("int");
-
-                    b.Property<int>("squareFeet")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ResCleanDetail");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
