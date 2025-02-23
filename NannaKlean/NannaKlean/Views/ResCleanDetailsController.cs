@@ -35,6 +35,11 @@ namespace NannaKlean.Views
 
             var resCleanDetail = await _context.ResCleanDetail
                 .FirstOrDefaultAsync(m => m.Id == id);
+
+            //get the miscitems that belong resCleanDetail and show them 
+            var miscItems = await _context.MiscItem
+                .Where(m => m.ResCleanDetailId == id).ToListAsync();
+
             if (resCleanDetail == null)
             {
                 return NotFound();

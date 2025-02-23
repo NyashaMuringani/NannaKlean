@@ -9,5 +9,6 @@ namespace NannaKlean.Models
         public Boolean requested { get; set; }
 
         public int ResCleanDetailId { get; set; }
+        public int MiscItemTypeId { get; set; }
     }
 }

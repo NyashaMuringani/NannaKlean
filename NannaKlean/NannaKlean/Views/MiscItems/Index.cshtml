@@ -15,6 +15,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.requested)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MiscItemTypeId)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -23,6 +26,9 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.requested)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MiscItemTypeId)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
