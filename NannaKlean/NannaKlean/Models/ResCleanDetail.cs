@@ -1,4 +1,6 @@
-﻿namespace NannaKlean.Models
+﻿using Microsoft.Extensions.Hosting;
+
+namespace NannaKlean.Models
 {
     public class ResCleanDetail
     {
@@ -8,5 +10,7 @@
         public int numBedrooms { get; set; }
         public int numBathRooms { get; set; }
         public DateTime createTime { get; set; }
+
+        public ICollection<MiscItem>? miscItems { get; }
     }
 }

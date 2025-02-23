@@ -1,9 +1,13 @@
-﻿namespace NannaKlean.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace NannaKlean.Models
 {
     public class MiscItem
     {
         public int Id { get; set; }
-        public String? Name { get; set; }
 
+        public Boolean requested { get; set; }
+
+        public int ResCleanDetailId { get; set; }
     }
 }

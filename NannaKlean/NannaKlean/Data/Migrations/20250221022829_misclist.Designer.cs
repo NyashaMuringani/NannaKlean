@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NannaKlean.Data;
 
@@ -11,9 +12,11 @@ using NannaKlean.Data;
 namespace NannaKlean.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250221022829_misclist")]
+    partial class misclist
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -257,36 +260,17 @@ namespace NannaKlean.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("ResCleanDetailId")
-                        .HasColumnType("int");
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool?>("requested")
-                        .HasColumnType("bit");
+                    b.Property<int?>("ResCleanDetailId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ResCleanDetailId");
 
                     b.ToTable("MiscItem");
-                });
-
-            modelBuilder.Entity("NannaKlean.Models.MiscItemType", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("longDesc")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("shortDesc")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("MiscItemType");
                 });
 
             modelBuilder.Entity("NannaKlean.Models.ResCleanDetail", b =>
@@ -372,9 +356,7 @@ namespace NannaKlean.Data.Migrations
                 {
                     b.HasOne("NannaKlean.Models.ResCleanDetail", null)
                         .WithMany("miscItems")
-                        .HasForeignKey("ResCleanDetailId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ResCleanDetailId");
                 });
 
             modelBuilder.Entity("NannaKlean.Models.ResCleanDetail", b =>
