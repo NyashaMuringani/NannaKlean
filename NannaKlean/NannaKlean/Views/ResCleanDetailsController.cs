@@ -34,27 +34,47 @@ namespace NannaKlean.Views
                 return NotFound();
             }
 
+            //get the resCleanDetail
             var resCleanDetail = await _context.ResCleanDetail
                 .FirstOrDefaultAsync(m => m.Id == id);
 
-            //get the miscitems that belong resCleanDetail and show them 
-            //var miscItems = await _context.MiscItem
-            //.Where(m => m.ResCleanDetailId == id).ToListAsync();
+            //get the list of miscItems
+            List<MiscItem> miscItemsList = (from selectMiscItem in _context.MiscItem
+                                 where selectMiscItem.ResCleanDetailId == id
+                                 select selectMiscItem).ToList();
 
-            //var dealercontacts = (from selectMiscItem in _context.MiscItem
-            //                     join selectMiscItemType in _context.MiscItemType on selectMiscItem.MiscItemTypeId equals selectMiscItemType.Id
-            //                     select selectMiscItemType).ToList();
+            //fill in each misc item with its misc item type
+            foreach (MiscItem miscItem in miscItemsList)
+             {
+                List<MiscItemType> itemType = (from selectMiscItemType in _context.MiscItemType
+                                         where selectMiscItemType.Id == miscItem.MiscItemTypeId
+                                         select selectMiscItemType).ToList();
 
-            var dealercontacts2 = (from selectMiscItem in _context.MiscItem
-                                  join selectMiscItemType in _context.MiscItemType on selectMiscItem.MiscItemTypeId equals selectMiscItemType.Id
-                                  select new { selectMiscItemType.longDesc,selectMiscItem.requested }).ToList();
+                if (itemType.Count > 0)
+                    {
+                    miscItem.MiscItemType = itemType[0];
+                }
+            }
+
+            //var miscItemsList = (from selectMiscItem in _context.MiscItem
+            //                      join selectMiscItemType in _context.MiscItemType on selectMiscItem.MiscItemTypeId equals selectMiscItemType.Id where selectMiscItem.ResCleanDetailId == id
+            //                      select selectMiscItem).ToList();
+
+                //var dealercontacts2 = (from selectMiscItem in _context.MiscItem
+                //                      join selectMiscItemType in _context.MiscItemType on selectMiscItem.MiscItemTypeId equals selectMiscItemType.Id
+                //                      select new { selectMiscItemType.longDesc,selectMiscItem.requested }).ToList();
 
             if (resCleanDetail == null)
             {
                 return NotFound();
             }
 
-            return View(resCleanDetail);
+foreach (MiscItem miscItem in miscItemsList)
+                {
+                resCleanDetail.miscItems.Add(miscItem);
+            }
+
+                return View(resCleanDetail);
         }
 
         // GET: ResCleanDetails/Create

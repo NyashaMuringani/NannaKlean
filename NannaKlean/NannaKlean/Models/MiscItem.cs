@@ -10,5 +10,7 @@ namespace NannaKlean.Models
 
         public int ResCleanDetailId { get; set; }
         public int MiscItemTypeId { get; set; }
+
+        public MiscItemType? MiscItemType { get; set; }
     }
 }

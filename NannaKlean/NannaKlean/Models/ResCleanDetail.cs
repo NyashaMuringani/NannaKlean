@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Hosting;
+﻿using Microsoft.DotNet.Scaffolding.Shared.CodeModifier.CodeChange;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.Extensions.Hosting;
 
 namespace NannaKlean.Models
 {
@@ -12,5 +14,6 @@ namespace NannaKlean.Models
         public DateTime createTime { get; set; }
 
         public ICollection<MiscItem>? miscItems { get; }
+
     }
 }
