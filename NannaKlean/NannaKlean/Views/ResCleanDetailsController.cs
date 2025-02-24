@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NannaKlean.Data;
 using NannaKlean.Models;
+using NuGet.Protocol;
 
 namespace NannaKlean.Views
 {
@@ -37,8 +38,16 @@ namespace NannaKlean.Views
                 .FirstOrDefaultAsync(m => m.Id == id);
 
             //get the miscitems that belong resCleanDetail and show them 
-            var miscItems = await _context.MiscItem
-                .Where(m => m.ResCleanDetailId == id).ToListAsync();
+            //var miscItems = await _context.MiscItem
+            //.Where(m => m.ResCleanDetailId == id).ToListAsync();
+
+            //var dealercontacts = (from selectMiscItem in _context.MiscItem
+            //                     join selectMiscItemType in _context.MiscItemType on selectMiscItem.MiscItemTypeId equals selectMiscItemType.Id
+            //                     select selectMiscItemType).ToList();
+
+            var dealercontacts2 = (from selectMiscItem in _context.MiscItem
+                                  join selectMiscItemType in _context.MiscItemType on selectMiscItem.MiscItemTypeId equals selectMiscItemType.Id
+                                  select new { selectMiscItemType.longDesc,selectMiscItem.requested }).ToList();
 
             if (resCleanDetail == null)
             {
