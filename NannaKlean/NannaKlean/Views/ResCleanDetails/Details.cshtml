@@ -42,6 +42,31 @@
         </dd>
     </dl>
 </div>
+
+<h4>Additional request details: </h4>
+<hr />
+<dl class="row">
+    @if (Model.miscItems != null)
+    {
+        foreach (MiscItem item in Model.miscItems)
+        {
+            <dd class="col-sm-2">
+                @item.MiscItemType.longDesc.ToString()
+            </dd>
+            <dt class="col-sm-10">
+                @if (item.requested)
+                {
+                    <input type="checkbox" disabled="disabled" name=@item.Id checked>
+                }
+                else
+                {
+                    <input type="checkbox" disabled="disabled" name=@item.Id>
+                }
+            </dt>
+    }
+}
+</dl>
+
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
