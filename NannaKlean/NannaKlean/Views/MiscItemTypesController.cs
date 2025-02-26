@@ -54,7 +54,7 @@ namespace NannaKlean.Views
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,shortDesc,longDesc")] MiscItemType miscItemType)
+        public async Task<IActionResult> Create([Bind("Id,shortDesc,longDesc,requested")] MiscItemType miscItemType)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace NannaKlean.Views
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,shortDesc,longDesc")] MiscItemType miscItemType)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,shortDesc,longDesc,requested")] MiscItemType miscItemType)
         {
             if (id != miscItemType.Id)
             {

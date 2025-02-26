@@ -49,6 +49,11 @@ namespace NannaKlean.Views
             return View();
         }
 
+        public async Task<IActionResult> CreateCustom()
+        {
+            return View(await _context.MiscItemType.ToListAsync());
+        }
+
         // POST: MiscItems/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -63,6 +68,21 @@ namespace NannaKlean.Views
                 return RedirectToAction(nameof(Index));
             }
             return View(miscItem);
+        }
+
+        public async Task<IActionResult> CreateCustomSave(List<MiscItemType> miscItemTypes)
+        {
+            if (ModelState.IsValid)
+            {
+                //_context.Add(miscItem);
+                //await _context.SaveChangesAsync();
+                //return RedirectToAction(nameof(Index));
+                foreach (MiscItemType miscItem in miscItemTypes)
+                {
+                    var test = miscItem;
+                }
+            }
+            return View(nameof(Index));
         }
 
         // GET: MiscItems/Edit/5

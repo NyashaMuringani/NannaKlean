@@ -8,6 +8,8 @@
 
         public String? longDesc { get; set; }
 
+        public Boolean requested { get; set; }
+
 
     }
 }

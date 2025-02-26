@@ -1,0 +1,25 @@
+﻿@model List<NannaKlean.Models.MiscItemType>
+
+@{
+    ViewData["Title"] = "Additional Cleaning Details";
+    // Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Index</h1>
+<form asp-action="CreateCustomSave" method="POST">
+    <dl class="row">
+    @for (var i = 0; i < Model.Count(); i++)
+    {
+        <dd class="col-sm-2">
+        <div>@Model[i].longDesc</div>
+            </dd>
+        <input asp-for="@Model[i].Id" type="hidden" />
+        <input asp-for="@Model[i].shortDesc" type="hidden" />
+            <input asp-for="@Model[i].longDesc" type="hidden" />
+        <dt class="col-sm-10">
+        <input asp-for="@Model[i].requested" />
+            </dt>
+        <br />
+    }
+    </dl>
+    <input type="submit" class="btn btn-primary" value="Next">
+</form>
