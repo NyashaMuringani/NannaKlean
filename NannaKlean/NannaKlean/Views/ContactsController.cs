@@ -58,7 +58,7 @@ namespace NannaKlean.Views
         {
             if (ModelState.IsValid)
             {
-                int newContactId = contact.Id;
+                contact.createTime = DateTime.Now;
 
                 _context.Add(contact);
 

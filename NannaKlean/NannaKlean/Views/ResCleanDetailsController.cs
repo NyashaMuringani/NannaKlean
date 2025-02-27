@@ -40,18 +40,18 @@ namespace NannaKlean.Views
 
             //get the list of miscItems
             List<MiscItem> miscItemsList = (from selectMiscItem in _context.MiscItem
-                                 where selectMiscItem.ResCleanDetailId == id
-                                 select selectMiscItem).ToList();
+                                            where selectMiscItem.ResCleanDetailId == id
+                                            select selectMiscItem).ToList();
 
             //fill in each misc item with its misc item type
             foreach (MiscItem miscItem in miscItemsList)
-             {
+            {
                 List<MiscItemType> itemType = (from selectMiscItemType in _context.MiscItemType
-                                         where selectMiscItemType.Id == miscItem.MiscItemTypeId
-                                         select selectMiscItemType).ToList();
+                                               where selectMiscItemType.Id == miscItem.MiscItemTypeId
+                                               select selectMiscItemType).ToList();
 
                 if (itemType.Count > 0)
-                    {
+                {
                     miscItem.MiscItemType = itemType[0];
                 }
             }
@@ -60,21 +60,21 @@ namespace NannaKlean.Views
             //                      join selectMiscItemType in _context.MiscItemType on selectMiscItem.MiscItemTypeId equals selectMiscItemType.Id where selectMiscItem.ResCleanDetailId == id
             //                      select selectMiscItem).ToList();
 
-                //var dealercontacts2 = (from selectMiscItem in _context.MiscItem
-                //                      join selectMiscItemType in _context.MiscItemType on selectMiscItem.MiscItemTypeId equals selectMiscItemType.Id
-                //                      select new { selectMiscItemType.longDesc,selectMiscItem.requested }).ToList();
+            //var dealercontacts2 = (from selectMiscItem in _context.MiscItem
+            //                      join selectMiscItemType in _context.MiscItemType on selectMiscItem.MiscItemTypeId equals selectMiscItemType.Id
+            //                      select new { selectMiscItemType.longDesc,selectMiscItem.requested }).ToList();
 
             if (resCleanDetail == null)
             {
                 return NotFound();
             }
 
-foreach (MiscItem miscItem in miscItemsList)
-                {
+            foreach (MiscItem miscItem in miscItemsList)
+            {
                 resCleanDetail.miscItems.Add(miscItem);
             }
 
-                return View(resCleanDetail);
+            return View(resCleanDetail);
         }
 
         // GET: ResCleanDetails/Create
@@ -88,10 +88,11 @@ foreach (MiscItem miscItem in miscItemsList)
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,squareFeet,numLivingRooms,numBedrooms,numBathRooms,createTime")] ResCleanDetail resCleanDetail)
+        public async Task<IActionResult> Create([Bind("IdGET: ResCleanDetails/Create,squareFeet,numLivingRooms,numBedrooms,numBathRooms,createTime,contactId")] ResCleanDetail resCleanDetail)
         {
             if (ModelState.IsValid)
             {
+                resCleanDetail.createTime = DateTime.Now;
                 _context.Add(resCleanDetail);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("CreateCustom", "MiscItems");
@@ -120,7 +121,7 @@ foreach (MiscItem miscItem in miscItemsList)
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,squareFeet,numLivingRooms,numBedrooms,numBathRooms,createTime")] ResCleanDetail resCleanDetail)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,squareFeet,numLivingRooms,numBedrooms,numBathRooms,createTime,contactId")] ResCleanDetail resCleanDetail)
         {
             if (id != resCleanDetail.Id)
             {
