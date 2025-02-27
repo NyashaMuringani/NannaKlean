@@ -95,7 +95,8 @@ namespace NannaKlean.Views
                 resCleanDetail.createTime = DateTime.Now;
                 _context.Add(resCleanDetail);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("CreateCustom", "MiscItems");
+                var postdata = _context.Add(resCleanDetail).Entity;
+                return RedirectToAction("CreateCustom", "MiscItems", new { resCleanId = postdata.Id });
             }
             return View(resCleanDetail);
         }
