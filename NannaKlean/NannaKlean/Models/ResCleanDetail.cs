@@ -13,6 +13,8 @@ namespace NannaKlean.Models
         public int numBathRooms { get; set; }
         public DateTime createTime { get; set; }
 
+        public int contactId { get; set; }
+
         public ICollection<MiscItem>? miscItems { get; }
 
     }

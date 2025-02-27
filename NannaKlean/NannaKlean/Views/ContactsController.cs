@@ -59,10 +59,15 @@ namespace NannaKlean.Views
             if (ModelState.IsValid)
             {
                 int newContactId = contact.Id;
+
                 _context.Add(contact);
+
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Create", "ResCleanDetails",new { contactId = newContactId });
-                //return View("~/Views/ResCleanDetails/Create.cshtml");
+
+                var postdata = _context.Add(contact).Entity;
+
+                return RedirectToAction("Create", "ResCleanDetails",new { contactId = postdata.Id });
+
             }
             return View(contact);
         }
