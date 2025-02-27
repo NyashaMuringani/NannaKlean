@@ -1,0 +1,12 @@
+﻿@model Image
+
+<form asp-action="UploadPhotos" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="photos" class="control-label"></label>
+        <input type="file" asp-for="photos" class="form-control" multiple />
+        <span asp-validation-for="photos" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>

@@ -10,22 +10,22 @@ using NannaKlean.Models;
 
 namespace NannaKlean.Views
 {
-    public class ContactsController : Controller
+    public class Photos1Controller : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public ContactsController(ApplicationDbContext context)
+        public Photos1Controller(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: Contacts
+        // GET: Photos1
         public async Task<IActionResult> Index()
         {
-            return View(await _context.ContactModel.ToListAsync());
+            return View(await _context.Photo.ToListAsync());
         }
 
-        // GET: Contacts/Details/5
+        // GET: Photos1/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,41 +33,39 @@ namespace NannaKlean.Views
                 return NotFound();
             }
 
-            var contact = await _context.ContactModel
+            var photo = await _context.Photo
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (contact == null)
+            if (photo == null)
             {
                 return NotFound();
             }
 
-            return View(contact);
+            return View(photo);
         }
 
-        // GET: Contacts/Create
+        // GET: Photos1/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Contacts/Create
+        // POST: Photos1/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Email,PhoneNumber,createTime")] Contact contact)
+        public async Task<IActionResult> Create([Bind("Id,resCleanDetailId,photoName")] Photo photo)
         {
             if (ModelState.IsValid)
             {
-                int newContactId = contact.Id;
-                _context.Add(contact);
+                _context.Add(photo);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Create", "ResCleanDetails",new { contactId = newContactId });
-                //return View("~/Views/ResCleanDetails/Create.cshtml");
+                return RedirectToAction(nameof(Index));
             }
-            return View(contact);
+            return View(photo);
         }
 
-        // GET: Contacts/Edit/5
+        // GET: Photos1/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -75,22 +73,22 @@ namespace NannaKlean.Views
                 return NotFound();
             }
 
-            var contact = await _context.ContactModel.FindAsync(id);
-            if (contact == null)
+            var photo = await _context.Photo.FindAsync(id);
+            if (photo == null)
             {
                 return NotFound();
             }
-            return View(contact);
+            return View(photo);
         }
 
-        // POST: Contacts/Edit/5
+        // POST: Photos1/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Email,PhoneNumber,createTime")] Contact contact)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,resCleanDetailId,photoName")] Photo photo)
         {
-            if (id != contact.Id)
+            if (id != photo.Id)
             {
                 return NotFound();
             }
@@ -99,12 +97,12 @@ namespace NannaKlean.Views
             {
                 try
                 {
-                    _context.Update(contact);
+                    _context.Update(photo);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ContactExists(contact.Id))
+                    if (!PhotoExists(photo.Id))
                     {
                         return NotFound();
                     }
@@ -115,10 +113,10 @@ namespace NannaKlean.Views
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(contact);
+            return View(photo);
         }
 
-        // GET: Contacts/Delete/5
+        // GET: Photos1/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -126,34 +124,34 @@ namespace NannaKlean.Views
                 return NotFound();
             }
 
-            var contact = await _context.ContactModel
+            var photo = await _context.Photo
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (contact == null)
+            if (photo == null)
             {
                 return NotFound();
             }
 
-            return View(contact);
+            return View(photo);
         }
 
-        // POST: Contacts/Delete/5
+        // POST: Photos1/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var contact = await _context.ContactModel.FindAsync(id);
-            if (contact != null)
+            var photo = await _context.Photo.FindAsync(id);
+            if (photo != null)
             {
-                _context.ContactModel.Remove(contact);
+                _context.Photo.Remove(photo);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ContactExists(int id)
+        private bool PhotoExists(int id)
         {
-            return _context.ContactModel.Any(e => e.Id == id);
+            return _context.Photo.Any(e => e.Id == id);
         }
     }
 }

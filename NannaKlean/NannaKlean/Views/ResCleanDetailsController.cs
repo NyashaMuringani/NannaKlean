@@ -94,7 +94,7 @@ foreach (MiscItem miscItem in miscItemsList)
             {
                 _context.Add(resCleanDetail);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("CreateCustom", "MiscItems");
             }
             return View(resCleanDetail);
         }
