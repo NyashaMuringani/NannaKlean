@@ -4,18 +4,18 @@
     ViewData["Title"] = "Additional Cleaning Details";
     // Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h1>Index</h1>
+<h1>Please check all that apply to the cleaning request</h1>
 <form asp-action="CreateCustomSave" method="POST">
     <dl class="row">
     @for (var i = 0; i < Model.Count(); i++)
     {
-        <dd class="col-sm-2">
+        <dd class="col-sm-4">
         <div>@Model[i].longDesc</div>
             </dd>
         <input asp-for="@Model[i].Id" type="hidden" />
         <input asp-for="@Model[i].shortDesc" type="hidden" />
             <input asp-for="@Model[i].longDesc" type="hidden" />
-        <dt class="col-sm-10">
+        <dt class="col-sm-6">
         <input asp-for="@Model[i].requested" />
             </dt>
         <br />

@@ -1,11 +1,15 @@
 ﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace NannaKlean.Models
 {
     public class Contact
     {
+        
         public int Id { get; set; }
+        [Required]
         public string? Name { get; set; }
+        [Required]
         public string? Email { get; set; }
         [DisplayName("Phone number")]
         public string? PhoneNumber { get; set; }

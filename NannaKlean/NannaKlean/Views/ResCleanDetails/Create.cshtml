@@ -4,9 +4,9 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Please add the details of the residence</h1>
 
-<h4>ResCleanDetail</h4>
+@* <h4>Please provide as much information as possible for a more accurate quote</h4> *@
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -33,25 +33,27 @@
                 <span asp-validation-for="numBathRooms" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="createTime" class="control-label"></label>
-                <input asp-for="createTime" class="form-control" />
+@*                 <label asp-for="createTime" class="control-label" type="hidden"></label> *@
+                <input asp-for="createTime" class="form-control" type="hidden" />
                 <span asp-validation-for="createTime" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
-                <label asp-for="contactId" class="control-label"></label>
-                <input asp-for="contactId" class="form-control" />
+@*                 <label asp-for="contactId" class="control-label"></label> *@
+                <input asp-for="contactId" class="form-control" value=@Context.Request.Query["contactId"] type="hidden" />
                 <span asp-validation-for="contactId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Submit" class="btn btn-primary" style="margin: 6px" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
+@* <div>
     <a asp-action="Index">Back to List</a>
-</div>
+</div> *@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
