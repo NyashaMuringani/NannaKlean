@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NannaKlean.Data;
 using NannaKlean.Models;
+using Microsoft.AspNetCore.Routing;
 
 namespace NannaKlean.Views
 {
@@ -70,13 +71,15 @@ namespace NannaKlean.Views
             return View(miscItem);
         }
 
-        public async Task<IActionResult> CreateCustomSave(List<MiscItemType> miscItemTypes)
+        public async Task<IActionResult> CreateCustomSave(List<MiscItemType> miscItemTypes, int Test)
         {
             if (ModelState.IsValid)
             {
                 //_context.Add(miscItem);
                 //await _context.SaveChangesAsync();
                 //return RedirectToAction(nameof(Index));
+                var routeData2 = RouteData.Values["resCleanId"]; ;
+
                 foreach (MiscItemType miscItem in miscItemTypes)
                 {
                     var test = miscItem;
