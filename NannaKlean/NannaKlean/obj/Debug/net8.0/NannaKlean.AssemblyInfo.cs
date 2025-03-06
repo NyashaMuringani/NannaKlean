@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NannaKlean")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0deb377386e7d5017f346b19ed807072fbd296fc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f45980cf38adea9f86791cc3820686050b705338")]
 [assembly: System.Reflection.AssemblyProductAttribute("NannaKlean")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NannaKlean")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

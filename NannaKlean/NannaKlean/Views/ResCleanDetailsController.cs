@@ -96,7 +96,12 @@ namespace NannaKlean.Views
                 _context.Add(resCleanDetail);
                 await _context.SaveChangesAsync();
                 var postdata = _context.Add(resCleanDetail).Entity;
-                return RedirectToAction("CreateCustom", "MiscItems", new { resCleanId = postdata.Id });
+                var newId = postdata.Id;
+
+                CustomViewModel customViewModel = new CustomViewModel();
+                customViewModel.resCleanId = newId;
+
+                return RedirectToAction("CreateCustom", "MiscItems", customViewModel);
             }
             return View(resCleanDetail);
         }

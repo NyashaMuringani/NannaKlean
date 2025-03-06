@@ -50,9 +50,11 @@ namespace NannaKlean.Views
             return View();
         }
 
-        public async Task<IActionResult> CreateCustom()
+        public async Task<IActionResult> CreateCustom(CustomViewModel customViewModel)
         {
-            return View(await _context.MiscItemType.ToListAsync());
+            var miscItemStypesFromDb = await _context.MiscItemType.ToListAsync();
+            customViewModel.miscItemTypes = miscItemStypesFromDb;
+            return View(customViewModel);
         }
 
         // POST: MiscItems/Create
@@ -71,16 +73,16 @@ namespace NannaKlean.Views
             return View(miscItem);
         }
 
-        public async Task<IActionResult> CreateCustomSave(List<MiscItemType> miscItemTypes, int Test)
+        public async Task<IActionResult> CreateCustomSave(CustomViewModel custViewModel)
         {
             if (ModelState.IsValid)
             {
                 //_context.Add(miscItem);
                 //await _context.SaveChangesAsync();
                 //return RedirectToAction(nameof(Index));
-                var routeData2 = RouteData.Values["resCleanId"]; ;
 
-                foreach (MiscItemType miscItem in miscItemTypes)
+
+                foreach (MiscItemType miscItem in custViewModel.miscItemTypes)
                 {
                     var test = miscItem;
                 }

@@ -1,4 +1,5 @@
-﻿@model List<NannaKlean.Models.MiscItemType>
+﻿@* //@model List<NannaKlean.Models.MiscItemType> *@
+@model NannaKlean.Models.CustomViewModel
 
 @{
     ViewData["Title"] = "Additional Cleaning Details";
@@ -6,21 +7,22 @@
 }
 <h1>Please check all that apply to the cleaning request</h1>
 <hr />
-<form asp-action="CreateCustomSave" method="POST" asp-route-Test="4">
+<form asp-action="CreateCustomSave" method="POST">
     <dl class="row">
-    @for (var i = 0; i < Model.Count(); i++)
+    @for (var i = 0; i < Model.miscItemTypes.Count(); i++)
     {
         <dd class="col-sm-4">
-        <div>@Model[i].longDesc</div>
+        <div>@Model.miscItemTypes[i].longDesc</div>
             </dd>
-        <input asp-for="@Model[i].Id" type="hidden" />
-        <input asp-for="@Model[i].shortDesc" type="hidden" />
-            <input asp-for="@Model[i].longDesc" type="hidden" />
+        <input asp-for="@Model.miscItemTypes[i].Id" type="hidden" />
+        <input asp-for="@Model.miscItemTypes[i].shortDesc" type="hidden" />
+            <input asp-for="@Model.miscItemTypes[i].longDesc" type="hidden" />
         <dt class="col-sm-6">
-                <input asp-for="@Model[i].requested" type="checkbox" class="checkbox" />
+                <input asp-for="@Model.miscItemTypes[i].requested" type="checkbox" class="checkbox" />
             </dt>
         <br />
     }
+        <input asp-for="@Model.resCleanId" type="hidden" value="@Model.resCleanId" />
     </dl>
     <input type="submit" class="btn btn-primary" value="Submit">
 </form>
