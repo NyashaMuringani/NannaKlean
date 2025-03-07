@@ -82,10 +82,17 @@ namespace NannaKlean.Views
                 //return RedirectToAction(nameof(Index));
 
 
-                foreach (MiscItemType miscItem in custViewModel.miscItemTypes)
+                foreach (MiscItemType miscItemType in custViewModel.miscItemTypes)
                 {
-                    var test = miscItem;
+                    MiscItem newMiscItem = new MiscItem();
+                    newMiscItem.MiscItemTypeId = miscItemType.Id;
+                    newMiscItem.ResCleanDetailId = custViewModel.resCleanId;
+                    newMiscItem.requested = miscItemType.requested;
+                    _context.Add(newMiscItem);
+                    await _context.SaveChangesAsync();
+                 
                 }
+                return RedirectToAction("Index", "Photos1");
             }
             return View(nameof(Index));
         }

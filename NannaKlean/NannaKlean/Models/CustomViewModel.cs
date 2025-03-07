@@ -6,12 +6,6 @@
 
         public int resCleanId { get; set; }
 
-        //public CustomViewModel(int newResCleanId)
-        //{
-        //    resCleanId = newResCleanId;
-
-        //    miscItemTypes = new List<NannaKlean.Models.MiscItemType>();
-        //}
 
     }
 }
